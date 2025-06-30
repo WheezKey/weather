@@ -867,9 +867,8 @@ g#monsterbody {
     translate: 50%;
   }
 }
-g#biplane {
-  /* animation biplaneAnimation */
-}
+/* g#biplane ruleset removed to avoid empty ruleset error */
+/* animation biplaneAnimation */
 
 @keyframes biplaneAnimation {
   0% {
