@@ -202,3 +202,135 @@ body {
     scale: 1;
   }
 }
+.window-rounded svg#mountains.clouds #clouds,
+.window-rounded svg#mountains.clouds #mid-clouds {
+  opacity: 1;
+  translate: 0 0%;
+}
+.window-rounded svg#mountains.clouds #mid-clouds-1,
+.window-rounded svg#mountains.clouds #clouds {
+  animation: cloudsAnimation 12s infinite ease-in-out !important;
+}
+.window-rounded svg#mountains.clouds #mid-clouds-2,
+.window-rounded svg#mountains.clouds #top-cloud {
+  animation: cloudsAnimation 7s infinite ease-in-out !important;
+  animation-delay: -3s;
+}
+@keyframes cloudsAnimation {
+  0% {
+    translate: 1% 0;
+  }
+  50% {
+    translate: -1% 0;
+  }
+  100% {
+    translate: 1% 0;
+  }
+}
+/* storm */
+.window-rounded svg#mountains.storm > *:not(#strike-1):not(#strike-2) {
+  transition: all 2s ease-in-out;
+  animation: stormAnimation 10s infinite ease-in-out,
+    stormAnimation2 12s infinite ease-in-out;
+}
+.window-rounded svg#mountains.storm #clouds,
+.window-rounded svg#mountains.storm #back-clouds-1,
+.window-rounded svg#mountains.storm #back-clouds-2,
+.window-rounded svg#mountains.storm #back-clouds-3 {
+  opacity: 1;
+  translate: 0 0%;
+  filter: contrast(1) grayscale(0.7) brightness(0.6);
+  animation: cloudsAnimation 12s infinite ease-in-out !important;
+}
+.window-rounded svg#mountains.storm #strike-1 {
+  animation: lightningAnimation 10s infinite ease-in-out;
+}
+.window-rounded svg#mountains.storm #strike-2 {
+  animation: lightningAnimation 12s infinite ease-in-out;
+}
+@keyframes stormAnimation {
+  20% {
+    filter: contrast(1) grayscale(0.7) brightness(0.6);
+  }
+  21% {
+    filter: contrast(1) grayscale(0.7) brightness(1);
+  }
+  22% {
+    filter: contrast(1) grayscale(0.7) brightness(0.6);
+  }
+  80% {
+    filter: contrast(1) grayscale(0.7) brightness(0.6);
+  }
+  81% {
+    filter: contrast(1) grayscale(0.7) brightness(1);
+  }
+  82% {
+    filter: contrast(1) grayscale(0.7) brightness(0.6);
+  }
+}
+@keyframes stormAnimation2 {
+  20% {
+    filter: contrast(1) grayscale(0.7) brightness(0.6);
+  }
+  21% {
+    filter: contrast(1) grayscale(0.7) brightness(1);
+  }
+  22% {
+    filter: contrast(1) grayscale(0.7) brightness(0.6);
+  }
+  80% {
+    filter: contrast(1) grayscale(0.7) brightness(0.6);
+  }
+  81% {
+    filter: contrast(1) grayscale(0.7) brightness(1);
+  }
+  82% {
+    filter: contrast(1) grayscale(0.7) brightness(0.6);
+  }
+}
+@keyframes lightningAnimation {
+  20% {
+    opacity: 0;
+  }
+  21% {
+    opacity: 1;
+    filter: drop-shadow(0px 0px 10px rgb(255, 208, 0));
+  }
+  22% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  81% {
+    opacity: 1;
+    filter: drop-shadow(0px 0px 10px rgb(255, 208, 0));
+  }
+  82% {
+    opacity: 0;
+  }
+}
+.window-rounded svg#mountains.storm #snow-1 {
+  animation: stormRainAnimation 1s infinite linear !important;
+  opacity: 0.3;
+}
+.window-rounded svg#mountains.storm #snow-2 {
+  animation: stormRainAnimation 1.1s infinite linear !important;
+  opacity: 0.3;
+}
+@keyframes stormRainAnimation {
+  0% {
+    transform: translateY(-30%) translateX(-20%);
+    opacity: 0;
+  }
+  6% {
+    opacity: 0.3;
+  }
+  94% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(20%) translateX(0%);
+    opacity: 0;
+  }
+}
